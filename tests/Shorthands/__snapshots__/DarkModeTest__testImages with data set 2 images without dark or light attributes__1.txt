@@ -1,0 +1,2 @@
+<p><img src="/example-one.jpg" alt="image one" />
+<img src="/example-two.jpg" alt="image two" /></p>

@@ -1,0 +1,3 @@
+<h1>test header</h1>
+<p><img src="/example.jpg" alt="test" />
+test text</p>
