@@ -18,13 +18,15 @@ class DarkModeTest extends MarkdownTestCase
 MD,
         ];
 
-        yield '2 images without dark or light attributes' => [<<<MD
+        yield '2 images without dark or light attributes' => [
+            <<<MD
 ![image one](/example-one.jpg)
 ![image two](/example-two.jpg)
 MD,
         ];
 
-        yield '2 picture elements' => [<<<MD
+        yield '2 picture elements' => [
+            <<<MD
 ![image one dark](/example-one-dark.jpg){scheme=dark}
 ![image one light](/example-one-light.jpg){scheme=light}
 
