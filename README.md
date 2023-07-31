@@ -153,11 +153,11 @@ for more information.
 [ico-license]: https://img.shields.io/badge/license-MIT-green.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/sven/commonmark-image-media-queries.svg?style=flat-square
 [ico-build]: https://img.shields.io/github/actions/workflow/status/svenluijten/commonmark-image-media-queries/run-tests.yml?branch=main&style=flat-square
-[ico-styleci]: https://styleci.io/repos/:styleci/shield
+[ico-styleci]: https://styleci.io/repos/672279253/shield
 [ico-phpstan]: https://img.shields.io/badge/phpstan-enabled-blue.svg?style=flat-square
 
 [link-packagist]: https://packagist.org/packages/sven/commonmark-image-media-queries
 [link-downloads]: https://packagist.org/packages/sven/commonmark-image-media-queries/stats
 [link-build]: https://github.com/svenluijten/commonmark-image-media-queries/actions/workflows/run-tests.yml
-[link-styleci]: https://styleci.io/repos/:styleci
+[link-styleci]: https://styleci.io/repos/672279253
 [link-phpstan]: https://github.com/phpstan/phpstan
