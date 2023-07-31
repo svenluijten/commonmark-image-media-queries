@@ -7,11 +7,11 @@
 [![StyleCI][ico-styleci]][link-styleci]
 [![PhpStan][ico-phpstan]][link-phpstan]
 
-This [CommonMark](https://commonmark.thephpleague.com) extension allows you to add media queries to your 
+This [CommonMark](https://commonmark.thephpleague.com) extension allows you to add media queries to images in your 
 CommonMark-rendered Markdown.
 
 ## Installation
-You can install this extension via [Composer](http://getcomposer.org):
+You can install this extension [via Composer](http://getcomposer.org):
 
 ```bash
 composer require sven/commonmark-image-media-queries

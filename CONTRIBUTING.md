@@ -2,7 +2,7 @@
 Thank you for considering to contribute to this repository! This file will walk you through all the steps to ensure both
 you and I have a good time submitting and reviewing your contribution. First off, some basic rules and reading material:
 
-- Submit your work in a new branch and make the PR to the master branch.
+- Submit your work in a new branch and make the PR to the `main` branch.
 - [Write a short & descriptive commit message](http://chris.beams.io/posts/git-commit/).
 - Rebase before committing the final change.
 - Stick to [PSR-2](http://www.php-fig.org/psr/psr-2/).
@@ -37,7 +37,7 @@ $ cd <REPOSITORY>
 ```
 
 ### Create a branch
-Make your own feature branch in order not to clutter up master.
+Make your own feature branch in order not to clutter up `main`.
 
 ```bash
 # Think of a good name for your branch:
@@ -48,7 +48,7 @@ $ git checkout -b <BRANCH_NAME>
 ```
 
 ### Add a remote
-Add an 'upstream' remote to pull from and to stay up to date with the work being done in there.
+Add an `upstream` remote to pull from and to stay up to date with the work being done in there.
 
 ```bash
 # List all current remotes
@@ -56,7 +56,7 @@ $ git remote -v
 origin  git@github.com/<USERNAME>/<REPOSITORY>.git (fetch)
 origin  git@github.com/<USERNAME>/<REPOSITORY>.git (push)
 
-# Add a new remote called 'upstream'
+# Add a new remote called `upstream`
 $ git remote add upstream git@github.com:svenluijten/<REPOSITORY>.git
 # Or if you prefer HTTPS:
 $ git remote add upstream https://github.com/svenluijten/<REPOSITORY>.git
@@ -74,7 +74,7 @@ Pull from upstream to stay up to date with what others might be doing in this re
 are your responsibility to resolve.
 
 ```bash
-$ git pull --rebase upstream master
+$ git pull --rebase upstream main
 ```
 
 ### Working on branch
@@ -90,4 +90,4 @@ You can run `composer check` to see if the tests & static analysis pass. Feel fr
 very end, this could take a while on bigger projects. To only run the tests, run `composer test`.
 
 ### Submitting pull request
-Now, let's head back over to this repository on GitHub and submit the pull request!
+Now head back over to this repository on GitHub and submit the pull request!
