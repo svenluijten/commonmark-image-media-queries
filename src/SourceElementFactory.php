@@ -29,9 +29,9 @@ final class SourceElementFactory
         }
 
         foreach ($this->shorthandCollection->attributes() as $attribute) {
-            if ($image->data->has('attributes/' . $attribute)) {
+            if ($image->data->has('attributes/'.$attribute)) {
                 /** @var string $value */
-                $value = $image->data->get('attributes/' . $attribute);
+                $value = $image->data->get('attributes/'.$attribute);
                 $query = $this->shorthandCollection->get($attribute);
 
                 return str_replace('{}', $value, $query);

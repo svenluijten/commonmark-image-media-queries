@@ -37,8 +37,8 @@ final class ImageMediaQueriesExtension implements ConfigurableExtensionInterface
     }
 
     /**
-     * @param class-string $class
-     * @param iterable<ExtensionInterface> $extensions
+     * @param  class-string  $class
+     * @param  iterable<ExtensionInterface>  $extensions
      * @return void
      */
     private function assertArrayContainsInstanceOf(string $class, iterable $extensions): void
@@ -49,7 +49,7 @@ final class ImageMediaQueriesExtension implements ConfigurableExtensionInterface
             }
         }
 
-        throw new \RuntimeException('The "' . self::class . '" extension requires the "' . $class . '" extension to be loaded before it.');
+        throw new \RuntimeException('The "'.self::class.'" extension requires the "'.$class.'" extension to be loaded before it.');
     }
 
     public function addShorthand(Shorthand $shorthand): self

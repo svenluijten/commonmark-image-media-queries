@@ -6,7 +6,6 @@ use League\CommonMark\Node\Node;
 use League\CommonMark\Renderer\ChildNodeRendererInterface;
 use League\CommonMark\Renderer\NodeRendererInterface;
 use League\CommonMark\Util\HtmlElement;
-use League\Config\ConfigurationInterface;
 use Sven\CommonMark\ImageMediaQueries\Node\Picture;
 
 final class PictureRenderer implements NodeRendererInterface

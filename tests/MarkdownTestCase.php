@@ -31,7 +31,7 @@ abstract class MarkdownTestCase extends TestCase
 
         $converter = new MarkdownConverter($environment);
 
-        $output = rtrim((string)$converter->convert($markdown));
+        $output = rtrim((string) $converter->convert($markdown));
 
         $this->assertMatchesSnapshot($output);
     }

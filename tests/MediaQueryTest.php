@@ -18,7 +18,7 @@ class MediaQueryTest extends MarkdownTestCase
         ];
 
         yield 'an image with 2 (non-image) siblings' => [
-            <<<MD
+            <<<'MD'
 # test header
 ![test](/example.jpg)
 test text
@@ -26,20 +26,20 @@ MD,
         ];
 
         yield 'single image with media query' => [
-            <<<MD
+            <<<'MD'
 ![large](/large.jpg){media="(min-width: 1000px)"}
 MD,
         ];
 
         yield '2 images where one has a media query' => [
-            <<<MD
+            <<<'MD'
 ![large](/large.jpg){media="(min-width: 1000px)"}
 ![medium](/medium.jpg)
 MD,
         ];
 
         yield 'multiple images with media queries' => [
-            <<<MD
+            <<<'MD'
 ![1200](/1200.jpg){media="(min-width: 1200px)"}
 ![800](/800.jpg){media="(min-width: 800px)"}
 ![480](/480.jpg){media="(min-width: 480px)"}
@@ -48,7 +48,7 @@ MD,
         ];
 
         yield 'additional attributes' => [
-            <<<MD
+            <<<'MD'
 ![large](/large.jpg){media="(min-width: 1000px)" type="image/jpeg"}
 ![medium](/medium.jpg)
 MD,
