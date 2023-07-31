@@ -113,7 +113,7 @@ final class AspectRatio implements Shorthand
 }
 ```
 
-If you then add the shorthand to the extension, you can use attributes like `{min-aspect:8/5}` and `{max-aspect:3/2}` on
+If you then add the shorthand to the extension, you can use attributes like `{min-aspect=8/5}` and `{max-aspect=3/2}` on
 images in your Markdown.
 
 > **Note:** You can implement the `\Sven\CommonMark\ImageMediaQueries\Shorthands\ConfigurationAwareShorthand` interface
