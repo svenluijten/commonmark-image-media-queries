@@ -12,21 +12,21 @@ class DarkModeTest extends MarkdownTestCase
     public static function dataProvider(): iterable
     {
         yield '2 images with light and dark attributes' => [
-            <<<MD
+            <<<'MD'
 ![image one](/example-dark.jpg){scheme=dark}
 ![image two](/example-light.jpg){scheme=light}
 MD,
         ];
 
         yield '2 images without dark or light attributes' => [
-            <<<MD
+            <<<'MD'
 ![image one](/example-one.jpg)
 ![image two](/example-two.jpg)
 MD,
         ];
 
         yield '2 picture elements' => [
-            <<<MD
+            <<<'MD'
 ![image one dark](/example-one-dark.jpg){scheme=dark}
 ![image one light](/example-one-light.jpg){scheme=light}
 

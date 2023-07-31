@@ -28,7 +28,7 @@ final class ImageMediaQueryListener implements ConfigurationAwareInterface
     private Collection $shorthandCollection;
 
     /**
-     * @param Shorthand[] $shorthands
+     * @param  Shorthand[]  $shorthands
      */
     public function __construct(array $shorthands)
     {
@@ -51,7 +51,7 @@ final class ImageMediaQueryListener implements ConfigurationAwareInterface
         $paragraphsWithRelevantImages = (new Query())
             ->where(Query::type(Paragraph::class))
             ->andWhere(Query::hasChild(function (Node $node) {
-                $attrs = array_keys((array)$node->data->get('attributes'));
+                $attrs = array_keys((array) $node->data->get('attributes'));
 
                 return count(array_intersect($attrs, ['media', ...$this->shorthandCollection->attributes()])) > 0;
             }))
@@ -91,7 +91,7 @@ final class ImageMediaQueryListener implements ConfigurationAwareInterface
     }
 
     /**
-     * @param Node $paragraph
+     * @param  Node  $paragraph
      * @return Image[]
      */
     protected function findAllImages(Node $paragraph): array
