@@ -7,7 +7,7 @@ use League\CommonMark\Node\Node;
 class AttributeHelper
 {
     /**
-     * @param  Node  $node
+     * @param  \League\CommonMark\Node\Node  $node
      * @param  string[]  $attributes
      * @return void
      */

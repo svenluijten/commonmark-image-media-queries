@@ -3,6 +3,7 @@
 namespace Sven\CommonMark\ImageMediaQueries;
 
 use League\CommonMark\Extension\CommonMark\Node\Inline\Image;
+use RuntimeException;
 use Sven\CommonMark\ImageMediaQueries\Node\Source;
 
 final class SourceElementFactory
@@ -38,6 +39,6 @@ final class SourceElementFactory
             }
         }
 
-        throw new \RuntimeException('No media query could be determined for image.');
+        throw new RuntimeException('No media query could be determined for image.');
     }
 }

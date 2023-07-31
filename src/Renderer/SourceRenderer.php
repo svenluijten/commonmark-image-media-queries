@@ -12,7 +12,7 @@ class SourceRenderer implements NodeRendererInterface
 {
     public function render(Node $node, ChildNodeRendererInterface $childRenderer): HtmlElement
     {
-        /** @var Source $node */
+        /** @var \Sven\CommonMark\ImageMediaQueries\Node\Source $node */
         Source::assertInstanceOf($node);
 
         /** @var array<string, string|string[]> $existingAttributes */

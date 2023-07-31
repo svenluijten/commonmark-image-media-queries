@@ -6,9 +6,9 @@ use League\CommonMark\Environment\EnvironmentBuilderInterface;
 use League\CommonMark\Event\DocumentParsedEvent;
 use League\CommonMark\Extension\Attributes\AttributesExtension;
 use League\CommonMark\Extension\ConfigurableExtensionInterface;
-use League\CommonMark\Extension\ExtensionInterface;
 use League\Config\ConfigurationBuilderInterface;
 use Nette\Schema\Expect;
+use RuntimeException;
 use Sven\CommonMark\ImageMediaQueries\Event\ImageMediaQueryListener;
 use Sven\CommonMark\ImageMediaQueries\Node\Picture;
 use Sven\CommonMark\ImageMediaQueries\Node\Source;
@@ -19,7 +19,7 @@ use Sven\CommonMark\ImageMediaQueries\Shorthands\Shorthand;
 final class ImageMediaQueriesExtension implements ConfigurableExtensionInterface
 {
     /**
-     * @var Shorthand[]
+     * @var \Sven\CommonMark\ImageMediaQueries\Shorthands\Shorthand[]
      */
     private array $shorthands = [];
 
@@ -38,7 +38,7 @@ final class ImageMediaQueriesExtension implements ConfigurableExtensionInterface
 
     /**
      * @param  class-string  $class
-     * @param  iterable<ExtensionInterface>  $extensions
+     * @param  iterable<\League\CommonMark\Extension\ExtensionInterface>  $extensions
      * @return void
      */
     private function assertArrayContainsInstanceOf(string $class, iterable $extensions): void
@@ -49,7 +49,7 @@ final class ImageMediaQueriesExtension implements ConfigurableExtensionInterface
             }
         }
 
-        throw new \RuntimeException('The "'.self::class.'" extension requires the "'.$class.'" extension to be loaded before it.');
+        throw new RuntimeException('The "'.self::class.'" extension requires the "'.$class.'" extension to be loaded before it.');
     }
 
     public function addShorthand(Shorthand $shorthand): self

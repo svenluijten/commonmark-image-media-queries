@@ -13,13 +13,12 @@ use Sven\CommonMark\ImageMediaQueries\AttributeHelper;
 use Sven\CommonMark\ImageMediaQueries\Collection;
 use Sven\CommonMark\ImageMediaQueries\Node\Picture;
 use Sven\CommonMark\ImageMediaQueries\Shorthands\ConfigurationAwareShorthand;
-use Sven\CommonMark\ImageMediaQueries\Shorthands\Shorthand;
 use Sven\CommonMark\ImageMediaQueries\SourceElementFactory;
 
 final class ImageMediaQueryListener implements ConfigurationAwareInterface
 {
     /**
-     * @var Shorthand[]
+     * @var \Sven\CommonMark\ImageMediaQueries\Shorthands\Shorthand[]
      */
     private array $shorthands;
 
@@ -28,7 +27,7 @@ final class ImageMediaQueryListener implements ConfigurationAwareInterface
     private Collection $shorthandCollection;
 
     /**
-     * @param  Shorthand[]  $shorthands
+     * @param  \Sven\CommonMark\ImageMediaQueries\Shorthands\Shorthand[]  $shorthands
      */
     public function __construct(array $shorthands)
     {
@@ -91,12 +90,12 @@ final class ImageMediaQueryListener implements ConfigurationAwareInterface
     }
 
     /**
-     * @param  Node  $paragraph
-     * @return Image[]
+     * @param  \League\CommonMark\Node\Node  $paragraph
+     * @return \League\CommonMark\Extension\CommonMark\Node\Inline\Image[]
      */
     protected function findAllImages(Node $paragraph): array
     {
-        /** @var \Traversable<Image> $images */
+        /** @var \Traversable<\League\CommonMark\Extension\CommonMark\Node\Inline\Image> $images */
         $images = (new Query())
             ->where(Query::type(Image::class))
             ->findAll($paragraph);
