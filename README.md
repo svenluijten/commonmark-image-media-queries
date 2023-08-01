@@ -45,7 +45,8 @@ This will render the following HTML:
 </picture>
 ```
 
-> **Note:** The _last_ image directly after at least one other image with a `media` attribute will always be used as the
+> [!IMPORTANT]
+> The _last_ image directly after at least one other image with a `media` attribute will always be used as the
 > "default", and will thus be rendered as the `<img />` tag in the `<picture>` element. If this last image has a `media`
 > attribute itself, that attribute will not be used and be stripped away.
 
@@ -116,8 +117,9 @@ final class AspectRatio implements Shorthand
 If you then add the shorthand to the extension, you can use attributes like `{min-aspect=8/5}` and `{max-aspect=3/2}` on
 images in your Markdown.
 
-> **Note:** You can implement the `\Sven\CommonMark\ImageMediaQueries\Shorthands\ConfigurationAwareShorthand` interface
-> _instead_ of the regular `Shorthand` interface if you would like access to the CommonMark configuration object.
+> [!NOTE]
+> You can implement the `\Sven\CommonMark\ImageMediaQueries\Shorthands\ConfigurationAwareShorthand` interface _instead_
+> of the regular `Shorthand` interface if you would like access to the CommonMark configuration object.
 
 ## Configuration
 By default, this extension adds the `media-query-picture` class to the `<picture>` element it renders. You can change
