@@ -1,8 +1,11 @@
 name: Tests
 on: [push, pull_request]
 
+env:
+    PHP_EXTENSIONS: dom
+
 jobs:
-    test:
+    phpunit:
         name: PHP ${{ matrix.php }} on ${{ matrix.os }} (${{ matrix.dependency-version }})
         runs-on: ${{ matrix.os }}
         strategy:
@@ -17,7 +20,7 @@ jobs:
               uses: shivammathur/setup-php@v2
               with:
                   php-version: ${{ matrix.php }}
-                  extensions: dom
+                  extensions: $PHP_EXTENSIONS
                   coverage: none
 
             - name: Restore Composer dependencies
@@ -36,8 +39,37 @@ jobs:
                   dependency-versions: ${{ matrix.dependency-version }}
                   composer-options: "--prefer-dist"
 
-            - name: Execute PHPUnit tests
+            - name: Run PHPUnit tests
               run: composer test
+
+    phpstan:
+        name: Static analysis
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3.5.3
+
+            - name: Configure PHP
+              uses: shivammathur/setup-php@v2
+              with:
+                  php-version: latest
+                  extensions: $PHP_EXTENSIONS
+                  coverage: none
+
+            - name: Restore Composer dependencies
+              id: cache-php
+              uses: actions/cache@v3
+              with:
+                  path: vendor
+                  key: ${{ matrix.os }}-php-${{ matrix.php }}-${{ hashFiles('**/composer.lock') }}
+                  restore-keys: |
+                      ${{ runner.os }}-php-
+
+            - name: Install dependencies
+              if: steps.cache-php.outputs.cache-hit != 'true'
+              uses: ramsey/composer-install@v2
+              with:
+                  dependency-versions: highest
+                  composer-options: "--prefer-dist"
 
             - name: Run PHPStan analysis
               run: composer analyse
