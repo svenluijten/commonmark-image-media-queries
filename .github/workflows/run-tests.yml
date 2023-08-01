@@ -1,6 +1,9 @@
 name: Tests
 on: [push, pull_request]
 
+env:
+    PHP_EXTENSIONS: dom
+
 jobs:
     phpunit:
         name: PHP ${{ matrix.php }} on ${{ matrix.os }} (${{ matrix.dependency-version }})
@@ -17,7 +20,7 @@ jobs:
               uses: shivammathur/setup-php@v2
               with:
                   php-version: ${{ matrix.php }}
-                  extensions: dom
+                  extensions: $PHP_EXTENSIONS
                   coverage: none
 
             - name: Restore Composer dependencies
@@ -49,7 +52,7 @@ jobs:
               uses: shivammathur/setup-php@v2
               with:
                   php-version: latest
-                  extensions: dom
+                  extensions: $PHP_EXTENSIONS
                   coverage: none
 
             - name: Restore Composer dependencies
