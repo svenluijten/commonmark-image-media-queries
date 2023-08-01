@@ -1,1 +1,1 @@
-<picture class="media-query-picture"><source media="(max-width: 600px)" srcset="/600.jpg" /><img src="/default.jpg" alt="default" /></picture>
+<p><picture class="media-query-picture"><source media="(max-width: 600px)" srcset="/600.jpg" /><img src="/default.jpg" alt="default" /></picture></p>

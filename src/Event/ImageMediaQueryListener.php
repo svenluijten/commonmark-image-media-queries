@@ -80,7 +80,8 @@ final class ImageMediaQueryListener implements ConfigurationAwareInterface
 
             AttributeHelper::removeFromNode($lastImage, ['media']);
 
-            $paragraph->replaceWith($picture);
+            $paragraph->detachChildren();
+            $paragraph->appendChild($picture);
         }
     }
 
