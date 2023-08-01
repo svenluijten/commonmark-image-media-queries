@@ -1,1 +1,1 @@
-<picture class="media-query-picture"><source media="(prefers-color-scheme: dark)" srcset="/example-dark.jpg" /><img src="/example-light.jpg" alt="image two" /></picture>
+<p><picture class="media-query-picture"><source media="(prefers-color-scheme: dark)" srcset="/example-dark.jpg" /><img src="/example-light.jpg" alt="image two" /></picture></p>

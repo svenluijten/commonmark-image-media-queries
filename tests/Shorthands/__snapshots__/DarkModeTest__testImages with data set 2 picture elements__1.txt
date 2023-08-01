@@ -1,1 +1,2 @@
-<picture class="media-query-picture"><source media="(prefers-color-scheme: dark)" srcset="/example-one-dark.jpg" /><img src="/example-one-light.jpg" alt="image one light" /></picture><picture class="media-query-picture"><source media="(prefers-color-scheme: dark)" srcset="/example-two-dark.jpg" /><img src="/example-two-light.jpg" alt="image two light" /></picture>
+<p><picture class="media-query-picture"><source media="(prefers-color-scheme: dark)" srcset="/example-one-dark.jpg" /><img src="/example-one-light.jpg" alt="image one light" /></picture></p>
+<p><picture class="media-query-picture"><source media="(prefers-color-scheme: dark)" srcset="/example-two-dark.jpg" /><img src="/example-two-light.jpg" alt="image two light" /></picture></p>

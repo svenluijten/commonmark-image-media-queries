@@ -1,1 +1,1 @@
-<picture class="media-query-picture"><img src="/large.jpg" alt="large" /></picture>
+<p><picture class="media-query-picture"><img src="/large.jpg" alt="large" /></picture></p>
